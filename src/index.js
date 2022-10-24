@@ -73,7 +73,7 @@ function onEntry(entries) {
   entries.forEach(entry => {
     if (entry.isIntersecting && eventsApi.query) {
       eventsApi
-        .fetchImages()
+        .fetchEvent()
         .then(({ hits, totalHits }) => {
           eventsApi.incrementLoadedHits(hits);
           if (totalHits <= eventsApi.loadedHits) {
